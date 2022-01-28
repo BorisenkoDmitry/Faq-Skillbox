@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ for Skillbox</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <section class="faq section">
+        <div class="container">
+            <h1 class="faq__h1">Часто задаваемые вопросы по курсу Веб&nbsp;верстка</h1>
+            <ul class="faq__modules">
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 1: Введение</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Обычно тут вопросов не возникает</h3>
+                            <div class="module-dropdown__text">
+                                ...
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 2: Базовый HTML</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">1. Как сделать якорные ссылки? Чтобы по клику на
+                                ссылки
+                                мы попадали на соответствующей раздел?
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Для начала вы создаете ссылку и задаете атрибут href, в значении атрибута выпишите
+                                    значения, например caption-1:</p>
+                                <p>
+                                    <span class="tegs">&lt;a</span> <span class="attr">href=<span
+                                            class="attr__val">"#caption-1"</span></span><span class="tegs">&gt;</span>
+                                    <span class="tegs__text">
+                                        Ссылка
+                                    </span>
+                                    <span class="tegs">&lt;/a&gt;</span>
+                                </p>
+                                <p>Важно понимать, чтобы якорь сработал нужно поставить решетку вначале. Это обозначение
+                                    уникального индивикатора id, дальше нам нужно задать атрибут id для блока к которому
+                                    мы
+                                    будем ссылаться, вот так:</p>
+                                <p><span class="tegs">&lt;div</span> <span class="attr">id=</span><span
+                                        class="attr__val">"caption-1"</span><span class="tegs">&gt;</span><br />
+                                    <span class="tegs">&emsp;&lt;h2&gt;</span><span class="attr__val"> Заголовок
+                                    </span><span class="tegs">&lt;/h2&gt;</span><br />
+                                    <span class="tegs">&emsp;&lt;p&gt;</span><span class="attr__val"> Текст</span> <span
+                                        class="tegs">&lt;/p&gt;</span><br />
+                                    <span class="tegs">&lt;/div&gt;</span>
+                                </p>
+                                <p>Как вы видите, в значении id мы уже не указываем решетку вначале, это важно, иначе
+                                    якорь
+                                    не сработает</p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">2. С чего начать? Вы не поняли, что вообще нужно
+                                сделать
+                                в домашнем задании?
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Вы можете посмотреть данное <a class="module-dropdown__link" target="_blank"
+                                        href="https://www.loom.com/share/c507abecbdc94cbc8619b34da9b6e333">Видео</a>,
+                                    проверяющий рассказывает как начать выполнять домашнее задание и на что стоит
+                                    обратить
+                                    внимание</p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">3. Почему у меня не отображается картинка при
+                                подключении?
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Тут возможно несколько причин:</p>
+                                <ol>
+                                    <li>Вы не правильно открыли директорию проекта через vs code, выберите папку в
+                                        которой
+                                        лежит html файл, правой кнопкой - открыть через vs code</li>
+                                    <li>Вы указали не правильный путь: href="C://Document//project/img/1.jpg" - такие
+                                        пути
+                                        мы не указываем. Этот путь относительно вашей файловой система. Нам нужно
+                                        указывать
+                                        путь относительно файла html, href="img/1.jpg". По путям вы можете почитать <a
+                                            class="module-dropdown__link" target="_blank"
+                                            href="https://www.uamedwed.com/blog/web/absolyutnyj-i-otnositelnyj-put-k-fajlam.html">Статью</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 3: Базовый css. Часть 1</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Как сделать расстояние между ссылками Indents и
+                                Modules
+                                используя один и тот же класс?</h3>
+                            <div class="module-dropdown__text">
+                                <ol>
+                                    <li>Нужно задать ссылкам одинаковый класс, например class="link"</li>
+                                    <li>Используйте псевдоклассы :not(:last-child)</li>
+                                    <li>Пропишите отступ следующим образом: .link:not(:last-child) { margin-right: 23px;
+                                        }
+                                    </li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Я не понимаю как мне реализовать 8 пункт из
+                                домашнего
+                                задания страницы article:<br />
+                                <small class="small">
+                                    8.Сделать ширину у параграфов внутри серых блоков 692 пикселя, а отступ снизу - 10
+                                    пикселей.
+                                    Подсказка: для простоты выполнения данного пункта используйте вложенность в CSS вида
+                                    .parent .paragraph {}.
+                                </small>
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>
+                                    Например у вас есть серый блок с классом .grey-block, а для всех параграфов вы
+                                    прописали
+                                    класс .paragraph.</p>
+                                <p>По заданию для параграфа вы прописали ширину 872px и отступ снизу, так? А в серых
+                                    блоках
+                                    у параграфа свойства нужно переопределить, это делается
+                                    через наследование классов, нужно обратиться через класс серого блока к параграфу,
+                                    вот
+                                    так:</p>
+                                <p>
+                                    .grey-block .paragraph { width: 692px; margin-bottom: 10px; }
+                                </p>
+                                <p>
+                                    <span class="tegs">&lt;div</span> <span class="attr">class=</span><span
+                                        class="attr__val">"grey-block"</span><span class="tegs">&gt;</span><br />
+                                    <span class="tegs">&emsp;&lt;p <span class="attr">class=</span><span
+                                            class="attr__val">"paragraph"</span>&gt;</span>
+                                    text <span class="tegs">&emsp;&lt;/p&gt;</span><br />
+
+                                    <span class="tegs">&lt;/div&gt;</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Я не понимаю как сделать пункт 2 домашнего
+                                задания:<br />
+                                <small class="small">
+                                    2. Проанализировать все текущие элементы страницы, проинспектировать их в devtools и
+                                    понять, у каких элементов есть лишние отступы, не соответствующие правилам -
+                                    например,
+                                    использующие margin-top.
+
+                                    Пример: у всех параграфов есть отступы по умолчанию - сверху и снизу. Вы можете
+                                    сбросить
+                                    их стилем margin: 0.
+                                </small>
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Вам нужно пронализировать страницу. Открыть devtools, нажать ctrl+shift+c и выделить
+                                    элементы, найти браузерные отступы сверху (оранжевая полоса надо элементом) и
+                                    обнулить
+                                    эти отступы margin-top: 0;</p>
+                                <img class="module-dropdown__img" src="img/screen_module3.jpg"
+                                    alt="Скриншот с изображением">
+                                <p>Как правило такие отступы могут быть у заголовков, параграфов, списков и др.
+                                    элементов.
+                                </p>
+                                <p>Сброс можно выполнить по селектору тега h1,h2,h3,p,ul {}</p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Подскажите пожалуйста, как обнулить отступ у
+                                последнего
+                                серого блока на странице article.html?</h3>
+                            <div class="module-dropdown__text">
+                                <p>Предположим, что у двух серых блоков одинаковый класс - class="grey-block", чтобы
+                                    обнулить отступ у последнего серого блока нужно использовать псевдокласс, запись
+                                    будет
+                                    следующая: .grey-block:last-child { margin-bottom: 0px; }</p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Как сделать так, чтобы стили элементов на страницах
+                                не
+                                пересекались?</h3>
+                            <div class="module-dropdown__text">
+                                <p>Нужно задавать классы каждому тегу и по классам писать стили, тогда стили
+                                    пересекаться не
+                                    будут, для каждой страницы можно в классе использовать prefix, например:</p>
+                                <p>Страница статьи, prefix - article:</p>
+                                <ol>
+                                    <li>Для параграфов - class="article__paragraph"</li>
+                                    <li>Для заголовков - class="article__h1", class="article__h2", class="article__h3"
+                                    </li>
+                                    <li>Для списка - class="article__list</li>
+                                    <li>Для тега li - class="article__item</li>
+                                    <li>Для ссылки a - class="article__link"</li>
+                                </ol>
+                                <p>Главная страница, prefix - home:</p>
+                                <ol>
+                                    <li>Для ссылок - class="home__logo", class="home__link", class="home__download"</li>
+                                </ol>
+                                <p>А так же примеры задания классов вы можете посмотреть <a
+                                        class="module-dropdown__link" href="https://github.com/yoksel/common-words"
+                                        target="_blank">Тут</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 4: Базовый CSS. Часть 2</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">У меня не получается правильно реализовать изображения в серых блоках, помогите пожалуйста?</h3>
+                            <div class="module-dropdown__text">
+                                <p>Допустим вот так выглядит наш серый блок:</p>
+                                <img src="img/screen_module8-4.jpg" alt="Изображение серого блока">
+                                <p>Чтобы правильно пописать фоновое изображение, нам не нужно внутри серого блока создавать дополнительный div. Достаточно просто добавить второй класс, например:</p>
+                                <img src="img/screen_module8-4-1.jpg" alt="Изображение серого блока">
+                                <p>И по второму класс gray-image-1 прописать в css свойства background-image, background-position, background-repeat, background-size: contain - чтобы фоновая картинка занимала всю высоту блока. О данный css свойствах рассказывалось в уроках, всегда старайтесь во время выполнения возвращаться к урокам и пересматриваться их.</p>
+                                <p>Важно! Повторяющиеся свойства старайтесь писать по общему классу, например background-position, background-repeat, background-size можно прописать по классу grey-block, а background-image по классу grey-image-1 и grey-image-2</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 5: Подготовка к верстке</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Почему так себя ведут блоки модулей? Как их
+                                выровнять?<br />
+                                <img class="module-dropdown__h3-img" src="img/screen_module5.jpg" alt="Скриншот">
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Это происходит, потому что у них задан display: inline-block;. Так себя могут вести
+                                    блоки, если у них разное наполнение контента. Чтобы это исправить нужно для блоков
+                                    модулей прописать <b>vertical-align: top;</b></p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Из за чего 2 блока модуля не помещаются в одну
+                                строку?
+                            </h3>
+                            <div class="module-dropdown__text">
+                                <p>Чтобы решить данную проблему, могут быть несколько причин:</p>
+                                <ol>
+                                    <li>Не прописано для блоков модулей css свойство <b>display: inline-block;</b></li>
+                                    <li>Указали не правильную ширину блоков</li>
+                                    <li>Указали не правильную ширину container-a</li>
+                                    <li>Нужно обнулить отступ справа у крайних блоков справа, то есть у каждого второго.
+                                        Это
+                                        можно правильно реализовать с помощью псевдокласса:
+                                        <b>.module__card:nth-child(2n) {
+                                            margin-right: 0; }</b></li>
+                                    <li>Не обнулили браузерный отступ у тега - ul</li>
+                                    <li>Между блоками модулей есть браузерный отступ - баг в 2px. Его можно убрать,
+                                        прописав
+                                        для тега ul в котором находятся блоки модулей: <b>font-size: 0;</b>. Не забудьте
+                                        для
+                                        контента вернуть размер шрифта</li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Как мне реализовать блоки модулей в макете, я не
+                                представляю даже с чего начать?</h3>
+                            <div class="module-dropdown__text">
+                                <p>Нужно внимательно прочитать еще раз задание. В задании написано, что блоки модулей
+                                    нужно
+                                    реализовать через список <b>ul</b>, где один блок модуля - это тег <b>li</b>. Чтобы
+                                    вам
+                                    было легче - посмотрите <a class="module-dropdown__link"
+                                        href="https://codepen.io/dmitrij-borisenko-the-lessful/pen/YzxqZYm"
+                                        target="_blank">пример</a>.</p>
+                                <ol>
+                                    <li>Постарайтесь не просто скопировать его, а разобраться, что там происходит.</li>
+                                    <li>Обратите внимание как реализовано фоновое изображение. Такой способ реализации
+                                        более гибок. Псевдоэлементы вы еще не проходили, но вы можете заглязнуть
+                                        вперёд в 10 модуль, там расскаывается про него, пока можно просто скопировать
+                                        идею.
+                                    </li>
+                                    <li>Повторите в 3 модуле урок про Организацию отступов, их нужно реализовать
+                                        правильно</li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 6: Layout. HTML-разметка - Рекомендации</h2>
+                    </div>
+                    <div class="module-item__reccomandation recommendation-dropdown">
+                        <ol class="recommendation-dropdown__list">
+                            <li class="recommendation-dropdown__item">Как вы уже поняли главного заголовка страницы h1 на макете нету. Наша задача для доступности создать данный заголовок (придумать) и скрыть с помощью специального класс <a class="module-dropdown__link" href="https://gist.github.com/Zakamsky/81c7b50c125ebdc331be044fd9f940cd">vissually-hidden</a></li>
+                            <li class="recommendation-dropdown__item">
+                                <p>Чтобы правильно определить заголовки, нужно придерживаться иерархии. Представьте книку:</p>
+                                <img src="img/screen__module6.jpg" alt="Изображение иерархии">
+                                <p>Книга - h1, Разделы - h2, Глава - h3. Так бы мы ее разметили так? А теперь как же нам применить это к нашему макету?</p>
+                                <p>Мы знаем, что заголовка h1 у нас нету, но мы его придумали - отлично. А теперь представьте, что секции начинаются с загловков и почти в каждой картчоке есть заголовки (не везде), но их нужно постараться найти.</p>
+                                <p>Так вот Разделы это и есть наши секции, а Главы это карточки, если сопоставлять с иерархией нашей книги.</p>
+                            </li>
+                            <li class="recommendation-dropdown__item">
+                                <p>Важно правильно использовать container. Помните, что container должен находиться внутри каждого блока: header, section, footer.</p>
+                                <p>Container - ограничивает контент каждого блока с определенной шириной и выравнивает его по центру</p>
+                            </li>
+                            <li>Возможно вы сталкнетесь со сложностью - как лучше разметить текст с ценой в карточках размещения. Подсказка: для выделения каждого фрагмента текста можно использовать тег span задав ему индивидуальный класс</li>
+                            <li>Определите похожие между собой элементы, например почти в каждой секции они есть, используйте для них список. В каждой секции достаточно использовать один список</li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 7: Layout. Flexbox</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Как правильно реализовать блок спецпредложения, как сделать так, чтобы правая карточка занимала высоту двух левых карточек?</h3>
+                            <div class="module-dropdown__text">
+                                <p>Возможно придется поменять структуру, если вы сделали данные карточки единым списком. Зачем это делать?</p>
+                                <p>Дело в том, чтобы растянуть карточки по отношению друг к другу, не меняя структуру (если оставить карточки списком) нам придется задать фиксированную высоту для блока. Как мы знаем, фиксированная высота - это плохо для переполнения контента</p>
+                                <p>Поэтому нам нужно разбить картчоки на div-ы, как в этом <a class="module-dropdown__link" href="https://codepen.io/dmitrij-borisenko-the-lessful/pen/MWvjbLz" target="_blank">примере</a></p>
+                      
+
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="faq__modules__item module-item">
+                    <div class="module-item__top flex">
+                        <button class="module-item__btn">
+                            <svg width="20" height="13" viewBox="0 0 20 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 11L10 3L18 11" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square" />
+                            </svg>
+                        </button>
+                        <h2 class="module-item__h2 faq__h2">Модуль 8: Layout. Стилизация</h2>
+                    </div>
+                    <ul class="module-item__list module-dropdown">
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Как разместить все стрелки на странице правильно? У меня не получается их правильно выровнять относительно текста.</h3>
+                            <div class="module-dropdown__text">
+                                <p>Хороший вопрос. По идее стрелки - декоративные изображения и их было бы правильно разместить фоном через css: свойство background. Но есть проблема, в 10 модуле нам нужно будет реализовать эффекты hover, focus, active.</p>
+                                <p>В реализации эффектов - нам придется менять цвет стрелки, сдвигать ее. Чтобы сделать это правильно, наша стрелка должна быть размещена svg кодом прямо в разметке, а не через css: background. Почему?</p>
+                                <p>Потому что, чтобы реализовать эффекты через background, вам придется заменять одну фоновую картинку на другую. Выгружать каждую картинки с разным цветом. Это долго и не правильно в целях оптимизации сайта, очень дорого для сайта во время эффекта заменять одну картинку на другую</p>
+                                <p>Поэтому размещаем стрелки внутри ссылки svg кодом. Как это сделать?</p>
+                                <p>Выделяем слой в figma:</p>
+                                <img src="img/screen_module8-1.jpg" alt="картинка">
+                                <p>Нажимаем правой кнопкой:</p>
+                                <img src="img/screen_module8-2.jpg" alt="картинка">
+                                <p>И с помощью ctrl+v вставляем в html</p>
+                                <p>Ну и чтобы выронять правильно стрелки относительно текста, нужно по классу ссылки прописать display: inline-flex; align-items: center;</p>
+                            </div>
+                        </li>
+                        <li class="module-dropdown__item">
+                            <h3 class="module-dropdown__h3 faq__h3">Подскажите пожалуйста, как правильно реализовать разделительную линию во второй части header?<br /> <img src="img/screen_module8-3.jpg" alt="картинка"></h3>
+                            <div class="module-dropdown__text">
+                                <p>Данная линия реализовывается через border. К примеру слева от нее у вас навигация со списком. Что нужно сделать:</p>
+                                <ol>
+                                    <li>Проверить, чтобы у родителя навигации не было css свойство align-items: center. Иначе высота навигации будет занимать высоту контента. А нам нужно, чтобы навигация занимала высоту родительского блока</li>
+                                    <li>Для навигации нужно прописать padding-right в соответствии с макетом и border-right</li>
+                                </ol>
+                            
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Остальные разделы в работе....</p>
+
+           <div class="grey-block grey-image-1">
+
+           </div>
+        </div>
+    </section>
+</body>
+
+</html>
