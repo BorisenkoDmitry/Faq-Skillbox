@@ -4,7 +4,7 @@
         color: var(--color-promo);
         z-index: 1;
     }
-    .module-item__top:hover .module-item__btn path {
+    .module-item__top:hover .module-item__btn svg {
         stroke: var(--color-promo);
     }
 }
@@ -26,7 +26,7 @@
 .module-item__btn:focus-visible {
     outline: 0;
 }
-.module-item__btn path {
+.module-item__btn svg {
     transition-property: stroke;
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
@@ -34,7 +34,7 @@
 .module-item__btn {
     transition: transform .3s ease-in-out;
 }
-.module-item__btn:focus-visible path {
+.module-item__btn:focus-visible svg {
     stroke: var(--color-promo);
 }
 .module-item__top:active .module-item__btn {
